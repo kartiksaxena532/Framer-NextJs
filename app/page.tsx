@@ -7,6 +7,8 @@ import { CardBody, CardContainer, CardItem } from "@/components/3d-card";
 import Spotlight from "@/components/Spotlight";
 import { BackgroundBeams } from "@/components/background-beams";
 import { MaskContainer } from "@/components/svgg-mask";
+import { HeroParallax } from "@/components/parallax";
+import {products} from "@/constants/constants";
 
 export default function Home() {
   return (
@@ -110,6 +112,7 @@ export default function Home() {
         </div>
         <BackgroundBeams />
       </div>
+     
     </main>
   );
 }

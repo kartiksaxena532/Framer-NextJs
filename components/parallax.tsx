@@ -147,6 +147,7 @@ export const ProductCard = ({
           height="600"
           width="600"
           className="object-cover object-left-top absolute h-full w-full inset-0"
+          unoptimized
           alt={product.title}
         />
       </Link>
