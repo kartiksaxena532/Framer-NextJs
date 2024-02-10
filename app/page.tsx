@@ -11,31 +11,37 @@ import { MaskContainer } from "@/components/svgg-mask";
 import { HeroParallax } from "@/components/parallax";
 import {products} from "@/constants/constants";
 import { GoogleGeminiEffect } from "@/components/goole-gemini";
+import {
+  TextRevealCard,
+  TextRevealCardDescription,
+  TextRevealCardTitle,
+} from "@/components/text-reveal";
 
-export function GoogleGeminiEffectDemo() {
-  const ref = React.useRef(null);
+
+export default function Home() {
+ 
+    const ref = React.useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ["start start", "end start"],
   });
- 
   const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
   const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
   const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
   const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
   const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
- 
 
-export default function Home() {
   return (
+
     <main className="flex min-h-screen flex-col items-center justify-between bg-slate-900">
       <h1 className="text-9xl font-serif text-slate-50 mt-10">
         Hello I'm Kartik Saxena
       </h1>
-      <div className="flex ">
+      <div className="flex">
         <div className="h-[40rem] w-full flex items-center ">
+          <a href="https://deepakopticals.vercel.app">
           <PinContainer
-            title="Kartik Dezigns"
+            title="Optical Store"
             href="https://kartikdesign.netlify.app"
           >
             <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
@@ -50,27 +56,33 @@ export default function Home() {
               <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
             </div>
           </PinContainer>
+          </a>
         </div>
 
         <div className="h-[40rem] w-full flex items-center ">
+        <a href="https://kartikdev.netlify.app">
           <PinContainer
-            title="Kartik Dezigns"
+            title="Kartik DeV"
             href="https://kartikdesign.netlify.app"
           >
             <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                This is a 3d Tooltip for UI
+                Developer Portfolio
               </h3>
               <div className="text-base !m-0 !p-0 font-normal">
                 <span className="text-slate-500 ">
-                  Lets Dive into this world of UI
+                  Checkout The Blend Of Creativity and Technology!
                 </span>
               </div>
               <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
             </div>
           </PinContainer>
+          </a>
         </div>
+
+
         <div className="h-[40rem] w-full flex items-center ">
+        <a href="https://kartikdesign.netlify.app">
           <PinContainer
             title="Kartik Dezigns"
             href="https://kartikdesign.netlify.app"
@@ -87,6 +99,7 @@ export default function Home() {
               <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
             </div>
           </PinContainer>
+          </a>
         </div>
       </div>
 
@@ -101,36 +114,15 @@ export default function Home() {
           }
           className="h-[40rem] border rounded-md"
         >
-          The first rule of <span className="text-red-500">MRR Club</span> is
-          you do not talk about MRR Club. The second rule of MRR Club is you DO
-          NOT talk about <span className="text-red-500">MRR Club</span>.
+         Sometimes I'm A <span className="text-red-500">Designer</span> who
+          loves to make eye soothing designs and sometimes I'm <span className="text-red-500">Batman🦇</span>
+          Let's not talk about <span className="text-red-500">My Vengeance</span>.
         </MaskContainer>
       </div>
 
-      <div className="h-[40rem] w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
-        <div className="max-w-2xl mx-auto p-4">
-          <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
-            Lets Talk It Out!
-          </h1>
-          <p></p>
-          <p className="text-neutral-500 max-w-lg mx-auto my-2 text-sm text-center relative z-10">
-            Welcome to MailJet, the best transactional email service on the web.
-            We provide reliable, scalable, and customizable email solutions for
-            your business. Whether you&apos;re sending order confirmations,
-            password reset emails, or promotional campaigns, MailJet has got you
-            covered.
-          </p>
-          <input
-            type="text"
-            placeholder="KartikDesigns"
-            className="rounded-lg border border-neutral-800 focus:ring-2 focus:ring-teal-500  w-full relative z-10 mt-4  bg-neutral-950 placeholder: text-white p-3"
-          />
-        </div>
-        <BackgroundBeams />
-        
-      </div>
+      
       <div
-      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      className="h-[300vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
       <GoogleGeminiEffect
@@ -142,6 +134,20 @@ export default function Home() {
           pathLengthFifth,
         ]}
       />
+    </div>
+    
+    <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+      <TextRevealCard
+        text="You know the business"
+        revealText="I know the chemistry "
+      >
+        <TextRevealCardTitle>
+          Sometimes,It needs one person to make a change!
+        </TextRevealCardTitle>
+        <TextRevealCardDescription>
+         So lets shake hands and make a deal. I'll tell you something that only I know, if you can guess it correctly then we are good to go.
+        </TextRevealCardDescription>
+      </TextRevealCard>
     </div>
     </main>
   );
