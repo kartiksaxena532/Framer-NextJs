@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
 import { PinContainer } from "@/components/3d-pin";
 import { BackgroundGradient } from "@/components/background-gradient";
@@ -37,7 +38,7 @@ export default function Home() {
   return (
 
     <main className="flex min-h-screen flex-col items-center justify-between bg-slate-900">
-      <h1 className="text-9xl font-serif text-slate-50 mt-10">
+      <h1 className="text-9xl font-mons text-slate-50 mt-10">
         Hello I'm Kartik Saxena
       </h1>
       <div className="flex">
@@ -92,11 +93,11 @@ export default function Home() {
           >
             <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
               <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                This is a 3d Tooltip for UI
+                Take a Look at My Designs
               </h3>
               <div className="text-base !m-0 !p-0 font-normal">
                 <span className="text-slate-500 ">
-                  Lets Dive into this world of UI
+                  
                 </span>
               </div>
               <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
@@ -106,10 +107,10 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="h-[40rem] w-full flex items-center justify-center overflow-hidden">
+      <div className="h-[50rem] w-full flex items-center justify-center overflow-hidden">
         <MaskContainer
           revealText={
-            <p className="max-w-4xl mx-auto text-slate-800 text-center  text-4xl font-bold">
+            <p className="max-w-4xl mx-auto text-slate-800 text-center  text-6xl font-bold">
                 A Full Stack Developer with a passion for
               creating robust and scalable web applications. With a wealth of
               experience in both front-end and back-end technologies
@@ -117,7 +118,7 @@ export default function Home() {
           }
           className="h-[40rem] border rounded-md"
         >
-         Sometimes I'm A <span className="text-red-500">Designer</span> who
+         Moreover I'm A <span className="text-red-500">Designer</span> who
           loves to make eye soothing designs and sometimes I'm <span className="text-red-500">Batman🦇</span>
           Let's not talk about <span className="text-red-500">My Vengeance</span>.
         </MaskContainer>
@@ -141,14 +142,18 @@ export default function Home() {
     
     <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
       <TextRevealCard
-        text="You know the business"
-        revealText="I know the chemistry "
+        text="with great development"
+        revealText="comes good design"
       >
         <TextRevealCardTitle>
-          Sometimes,It needs one person to make a change!
+        <div className="flex items-center justify-center text-4xl">
+          Sometimes,It needs one person🕺to make a change!
+          </div>
         </TextRevealCardTitle>
         <TextRevealCardDescription>
-         So lets shake hands and make a deal. I'll tell you something that only I know, if you can guess it correctly then we are good to go.
+          <div className="flex items-center  text-2xl">
+         So lets shake hands and make a deal.
+         </div>
         </TextRevealCardDescription>
       </TextRevealCard>
     </div>
@@ -164,7 +169,7 @@ export default function Home() {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-        Build lamps <br /> the right way
+        Let's Get You The Highlight <br />You Deserve!
       </motion.h1>
     </LampContainer>
     </main>
