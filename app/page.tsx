@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import React from "react";
+import { useScroll, useTransform } from "framer-motion";
 import { PinContainer } from "@/components/3d-pin";
 import { BackgroundGradient } from "@/components/background-gradient";
 import { CardBody, CardContainer, CardItem } from "@/components/3d-card";
@@ -9,6 +10,21 @@ import { BackgroundBeams } from "@/components/background-beams";
 import { MaskContainer } from "@/components/svgg-mask";
 import { HeroParallax } from "@/components/parallax";
 import {products} from "@/constants/constants";
+import { GoogleGeminiEffect } from "@/components/goole-gemini";
+
+export function GoogleGeminiEffectDemo() {
+  const ref = React.useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["start start", "end start"],
+  });
+ 
+  const pathLengthFirst = useTransform(scrollYProgress, [0, 0.8], [0.2, 1.2]);
+  const pathLengthSecond = useTransform(scrollYProgress, [0, 0.8], [0.15, 1.2]);
+  const pathLengthThird = useTransform(scrollYProgress, [0, 0.8], [0.1, 1.2]);
+  const pathLengthFourth = useTransform(scrollYProgress, [0, 0.8], [0.05, 1.2]);
+  const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
+ 
 
 export default function Home() {
   return (
@@ -113,7 +129,20 @@ export default function Home() {
         <BackgroundBeams />
         
       </div>
-     
+      <div
+      className="h-[400vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
+      ref={ref}
+    >
+      <GoogleGeminiEffect
+        pathLengths={[
+          pathLengthFirst,
+          pathLengthSecond,
+          pathLengthThird,
+          pathLengthFourth,
+          pathLengthFifth,
+        ]}
+      />
+    </div>
     </main>
   );
 }
