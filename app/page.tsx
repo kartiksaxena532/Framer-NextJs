@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import React from "react";
 import { motion } from "framer-motion";
@@ -37,7 +38,7 @@ export default function Home() {
 
   return (
 
-    <main className="flex min-h-screen flex-col items-center justify-between bg-slate-900">
+    <div className="flex min-h-screen flex-col items-center justify-between bg-slate-900">
       <h1 className="text-9xl font-mons text-slate-50 mt-10">
         Hello I'm Kartik Saxena
       </h1>
@@ -86,7 +87,7 @@ export default function Home() {
 
 
         <div className="h-[40rem] w-full flex items-center ">
-        <a href="https://kartikdesign.netlify.app">
+        
           <PinContainer
             title="Kartik Dezigns"
             href="https://kartikdesign.netlify.app"
@@ -103,7 +104,7 @@ export default function Home() {
               <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
             </div>
           </PinContainer>
-          </a>
+          
         </div>
       </div>
 
@@ -140,6 +141,7 @@ export default function Home() {
       />
     </div>
     
+
     <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
       <TextRevealCard
         text="with great development"
@@ -156,7 +158,9 @@ export default function Home() {
          </div>
         </TextRevealCardDescription>
       </TextRevealCard>
+
     </div>
+
     <LampContainer>
       <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
@@ -203,7 +207,7 @@ export default function Home() {
 
 </LampContainer>
     
-    </main>
+    </div>
 
 );
 }
