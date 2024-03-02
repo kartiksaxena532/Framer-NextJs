@@ -131,6 +131,9 @@ export default function Home() {
       className="h-[300vh] bg-black w-full dark:border dark:border-white/[0.1] rounded-md relative pt-40 overflow-clip"
       ref={ref}
     >
+
+
+      
       <GoogleGeminiEffect
         pathLengths={[
           pathLengthFirst,
@@ -144,6 +147,22 @@ export default function Home() {
     
 
     <div className="flex items-center justify-center bg-[#0E0E10] h-[40rem] rounded-2xl w-full">
+
+    <div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-20 p-4 relative h-[30rem]">
+      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
+      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
+ 
+      <EvervaultCard text="Try Me!" />
+ 
+      <h2 className="dark:text-white text-black mt-4 text-sm font-light">
+        Get a way to develop your project with me.
+      </h2>
+      <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
+        Watch me hover
+      </p>
+    </div>
       <TextRevealCard
         text="with great development"
         revealText="comes good design"
@@ -250,22 +269,7 @@ export default function Home() {
 
 </LampContainer>
 
-<div className="border border-black/[0.2] dark:border-white/[0.2] flex flex-col items-start max-w-sm mx-auto p-4 relative h-[30rem]">
-      <Icon className="absolute h-6 w-6 -top-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -left-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -top-3 -right-3 dark:text-white text-black" />
-      <Icon className="absolute h-6 w-6 -bottom-3 -right-3 dark:text-white text-black" />
- 
-      <EvervaultCard text="hover" />
- 
-      <h2 className="dark:text-white text-black mt-4 text-sm font-light">
-        Hover over this card to reveal an awesome effect. Running out of copy
-        here.
-      </h2>
-      <p className="text-sm border font-light dark:border-white/[0.2] border-black/[0.2] rounded-full mt-4 text-black dark:text-white px-2 py-0.5">
-        Watch me hover
-      </p>
-    </div>
+
     
     </div>
 
