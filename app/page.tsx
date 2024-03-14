@@ -14,6 +14,7 @@ import { HeroParallax } from "@/components/parallax";
 import {products} from "@/constants/constants";
 import { GoogleGeminiEffect } from "@/components/goole-gemini";
 import { EvervaultCard, Icon } from "@/components/hoverCard";
+import dynamic from 'next/dynamic';
 
 import {
   TextRevealCard,
@@ -23,6 +24,7 @@ import {
 
 import { LampContainer } from "@/components/lamp";
 
+const NoSSR = dynamic((type:any) => import('@/components/text-reveal'), { ssr: false });
 
 export default function Home() {
  
@@ -39,75 +41,12 @@ export default function Home() {
 
   return (
 
+
     <div className="flex min-h-screen flex-col items-center justify-between bg-slate-900">
       <h1 className="text-9xl font-mons text-slate-50 mt-10">
         Hello I'm Kartik Saxena
       </h1>
-      <div className="flex">
-        <div className="h-[40rem] w-full flex items-center ">
-          <a href="https://deepakopticals.vercel.app">
-          <PinContainer
-            title="Optical Store"
-            href="https://kartikdesign.netlify.app"
-          >
-            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-              <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                Optical Webstore
-              </h3>
-              <div className="text-base !m-0 !p-0 font-normal">
-                <span className="text-slate-500 ">
-                  The Widest Range of collections
-                </span>
-              </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-            </div>
-          </PinContainer>
-          </a>
-        </div>
-
-        <div className="h-[40rem] w-full flex items-center ">
-        <a href="https://kartikdev.netlify.app">
-          <PinContainer
-            title="Kartik DeV"
-            href="https://kartikdesign.netlify.app"
-          >
-            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-              <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                Developer Portfolio
-              </h3>
-              <div className="text-base !m-0 !p-0 font-normal">
-                <span className="text-slate-500 ">
-                  Checkout The Blend Of Creativity and Technology!
-                </span>
-              </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-            </div>
-          </PinContainer>
-          </a>
-        </div>
-
-
-        <div className="h-[40rem] w-full flex items-center ">
-        
-          <PinContainer
-            title="Kartik Dezigns"
-            href="https://kartikdesign.netlify.app"
-          >
-            <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
-              <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base text-slate-100">
-                Take a Look at My Designs
-              </h3>
-              <div className="text-base !m-0 !p-0 font-normal">
-                <span className="text-slate-500 ">
-                  
-                </span>
-              </div>
-              <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
-            </div>
-          </PinContainer>
-          
-        </div>
-      </div>
+      
 
       <div className="h-[50rem] w-full flex items-center justify-center overflow-hidden">
         <MaskContainer

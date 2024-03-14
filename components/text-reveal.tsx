@@ -1,4 +1,4 @@
-"use client";
+
 import React, { useEffect, useRef, useState, memo } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
@@ -132,7 +132,9 @@ export const TextRevealCardDescription = ({
   className?: string;
 }) => {
   return (
+    
     <p className={twMerge("text-[#a9a9a9] text-sm", className)}>{children}</p>
+    
   );
 };
 
