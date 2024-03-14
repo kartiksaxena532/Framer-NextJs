@@ -14,7 +14,7 @@ import { HeroParallax } from "@/components/parallax";
 import {products} from "@/constants/constants";
 import { GoogleGeminiEffect } from "@/components/goole-gemini";
 import { EvervaultCard, Icon } from "@/components/hoverCard";
-import dynamic from 'next/dynamic';
+import { AnimatedTooltip } from "@/components/animated-tooltip";
 
 import {
   TextRevealCard,
@@ -24,7 +24,7 @@ import {
 
 import { LampContainer } from "@/components/lamp";
 
-const NoSSR = dynamic((type:any) => import('@/components/text-reveal'), { ssr: false });
+
 
 export default function Home() {
  
